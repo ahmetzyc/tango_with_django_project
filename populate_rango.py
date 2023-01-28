@@ -45,8 +45,8 @@ def populate():
 	likes = 64
 	for cat, cat_data in cats.items():
 		c = add_cat(cat, views, likes)
-		views = views/2
-		likes = likes/2
+		views = views//2
+		likes = likes//2
 		p_views = 8
 		for p in cat_data['pages']:
 			add_page(c, p['title'], p['url'],p_views)
