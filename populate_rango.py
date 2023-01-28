@@ -47,8 +47,10 @@ def populate():
 		c = add_cat(cat, views, likes)
 		views = views/2
 		likes = likes/2
+		p_views = 8
 		for p in cat_data['pages']:
-			add_page(c, p['title'], p['url'])
+			add_page(c, p['title'], p['url'],p_views)
+			p_views = p_views*2
 
 #print out the cats we have added
 	for c in Category.objects.all():
